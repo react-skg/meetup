@@ -1,0 +1,39 @@
+{
+  "name": "react-skg-meetup",
+  "version": "0.1.0",
+  "description": "React skg meetup",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/react-skg/meetup.git"
+  },
+  "keywords": [
+    "react",
+    "redux",
+    "react-native",
+    "react-router",
+    "functional-programming",
+    "styled-components",
+    "css",
+    "post.css"
+  ],
+  "license": "ISC",
+  "bugs": {
+  "url": "https://github.com/react-skg/meetup/issues"
+  },
+  "homepage": "https://github.com/react-skg/meetup#readme",
+  "dependencies": {
+    "react": "^15.5.4",
+    "react-dom": "^15.5.4",
+    "spectacle": "^2.0.0"
+  },
+  "devDependencies": {
+    "react-scripts": "1.0.6"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}
