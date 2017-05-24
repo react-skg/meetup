@@ -1,5 +1,1 @@
-import StateManagement from './stateManagement.jsx';
-
-export default {
-  StateManagement
-};
+export { default as StateManagement } from './stateManagement.jsx';

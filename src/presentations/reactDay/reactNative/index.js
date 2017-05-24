@@ -1,5 +1,1 @@
-import ReactNative from './reactNative.jsx';
-
-export default {
-  ReactNative
-};
+export { default as ReactNative } from './reactNative.jsx';

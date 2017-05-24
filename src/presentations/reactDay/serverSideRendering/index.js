@@ -1,5 +1,1 @@
-import ServerSideRendering from './serverSideRendering.jsx';
-
-export default {
-  ServerSideRendering
-};
+export { default as ServerSideRendering } from './serverSideRendering.jsx';

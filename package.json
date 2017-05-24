@@ -19,13 +19,15 @@
   ],
   "license": "ISC",
   "bugs": {
-  "url": "https://github.com/react-skg/meetup/issues"
+    "url": "https://github.com/react-skg/meetup/issues"
   },
   "homepage": "https://github.com/react-skg/meetup#readme",
   "dependencies": {
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "spectacle": "^2.0.0"
+    "react-router-dom": "^4.1.1",
+    "spectacle": "^2.0.0",
+    "webpack": "^2.6.0"
   },
   "devDependencies": {
     "react-scripts": "1.0.6"

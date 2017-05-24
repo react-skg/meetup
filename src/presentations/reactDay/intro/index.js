@@ -1,5 +1,1 @@
-import Intro from './intro.jsx';
-
-export default {
-  Intro
-};
+export { default as Intro } from './intro.jsx';

@@ -1,5 +1,1 @@
-import StyledCompoments from './styledCompoments.jsx';
-
-export default {
-  StyledCompoments
-};
+export { default as StyledComponents } from './styledComponents.jsx';
