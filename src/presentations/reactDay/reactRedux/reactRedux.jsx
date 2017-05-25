@@ -9,21 +9,21 @@ import { Deck, Slide, Text } from 'spectacle';
 
 import { theme } from "../common/darkTheme.js";
 
-export default class StateManagement extends Component {
+export default class ReactRedux extends Component {
   render() {
     return (
       <Deck theme={theme} transition="slide" progress="pacman">
         <Slide id="slide1">
-          <Text>StateManagement 1</Text>
+          <Text>ReactRedux 1</Text>
         </Slide>
         <Slide id="slide2">
-          <Text>StateManagement 2</Text>
+          <Text>ReactRedux 2</Text>
         </Slide>
         <Slide id="slide3">
-          <Text>StateManagement 3</Text>
+          <Text>ReactRedux 3</Text>
         </Slide>
         <Slide id="slide4">
-          <Text>StateManagement 4</Text>
+          <Text>ReactRedux 4</Text>
         </Slide>
       </Deck>
     );

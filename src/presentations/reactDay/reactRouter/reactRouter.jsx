@@ -7,12 +7,12 @@ import React, { Component } from 'react';
 
 import { Deck, Slide, Text } from 'spectacle';
 
-import theme from "../common/theme.js";
+import { theme } from "../common/darkTheme.js";
 
 export default class ReactRouter extends Component {
   render() {
     return (
-      <Deck transition="slide" progress="pacman">
+      <Deck theme={theme} transition="slide" progress="pacman">
         <Slide id="slide1">
           <Text>ReactRouter 1</Text>
         </Slide>
