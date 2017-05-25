@@ -7,7 +7,7 @@ import React, { Component } from 'react';
 
 import { Deck, Slide, Text } from 'spectacle';
 
-import { theme } from "../common/darkTheme.js";
+import { theme } from "../common/themes/darkTheme.js";
 
 export default class StateManagement extends Component {
   render() {
