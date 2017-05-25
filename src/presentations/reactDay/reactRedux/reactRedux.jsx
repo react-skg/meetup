@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 //   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
 // } from 'spectacle';
 
-import { Deck, Slide, Text } from 'spectacle';
+import { Deck, Slide, Text, BlockQuote, Quote } from 'spectacle';
 
 import { theme } from "../common/themes/darkTheme.js";
 
@@ -14,7 +14,9 @@ export default class ReactRedux extends Component {
     return (
       <Deck theme={theme} transition="slide" progress="pacman">
         <Slide id="slide1">
-          <Text>ReactRedux 1</Text>
+          <BlockQuote>
+              <Quote textColor="#FFF">"React Redux"</Quote>
+          </BlockQuote>
         </Slide>
         <Slide id="slide2">
           <Text>ReactRedux 2</Text>

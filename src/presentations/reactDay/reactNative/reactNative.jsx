@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 //   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
 // } from 'spectacle';
 
-import { Deck, Slide, Text } from 'spectacle';
+import { Deck, Slide, Text, BlockQuote, Quote } from 'spectacle';
 
 import { theme } from "../common/themes/darkTheme.js";
 
@@ -14,7 +14,9 @@ export default class ReactNative extends Component {
     return (
       <Deck theme={theme} transition="slide" progress="pacman">
         <Slide id="slide1">
-          <Text>ReactNative 1</Text>
+          <BlockQuote>
+              <Quote textColor="#FFF">"React Native"</Quote>
+          </BlockQuote>
         </Slide>
         <Slide id="slide2">
           <Text>ReactNative 2</Text>
