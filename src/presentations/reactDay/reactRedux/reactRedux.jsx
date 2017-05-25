@@ -9,23 +9,23 @@ import { Deck, Slide, Text, BlockQuote, Quote } from 'spectacle';
 
 import { theme } from "../common/themes/darkTheme.js";
 
-export default class StyledComponents extends Component {
+export default class ReactRedux extends Component {
   render() {
     return (
       <Deck theme={theme} transition="slide" progress="pacman">
         <Slide id="slide1">
           <BlockQuote>
-              <Quote textColor="#FFF">"Styled Components"</Quote>
+              <Quote textColor="#FFF">"React Redux"</Quote>
           </BlockQuote>
         </Slide>
         <Slide id="slide2">
-          <Text>StyledComponents 2</Text>
+          <Text>ReactRedux 2</Text>
         </Slide>
         <Slide id="slide3">
-          <Text>StyledComponents 3</Text>
+          <Text>ReactRedux 3</Text>
         </Slide>
         <Slide id="slide4">
-          <Text>StyledComponents 4</Text>
+          <Text>ReactRedux 4</Text>
         </Slide>
       </Deck>
     );
