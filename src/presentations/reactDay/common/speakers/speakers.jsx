@@ -13,6 +13,18 @@ const routes = {
   jamal: '/server-side-rendering'
 };
 
+const images = {
+  pavlos: require("../../../../assets/pavlos.jpg"),
+  dimitris: require("../../../../assets/dimitris.png"),
+  nikos: require("../../../../assets/nikos.jpg"),
+  xristina: require("../../../../assets/xristina.jpg"),
+  lefteris: require("../../../../assets/lefteris.jpg"),
+  sartios: require("../../../../assets/sartios.jpg"),
+  jamal: require("../../../../assets/jamal.jpg"),
+  background: require("../../../../assets/background.png"),
+  logo: require("../../../../assets/logo.png")
+};
+
 export default class Speakers extends Component {
   constructor(props){
   	super(props);
@@ -28,12 +40,12 @@ export default class Speakers extends Component {
   render() {
     return (
       <div
-        style={{ backgroundImage: "url('https://static1.squarespace.com/static/552078ebe4b0f9cd71b5cc47/56c2165eb6aa60cc01341ef7/56c216edab48dedeadbc9d92/1461594148194/?format=1500w')" }}
+        style={{ backgroundImage: `url(${images['background']})` }}
         className="meetup-speakers-wrapper"
       >
         <div className="meetup-speakers-container">
           <div className="meetup-speakes-logo-container">
-            <img className="meetup-speakes-logo-image" alt="logo" src="//react.friends.com.gr/wp-content/uploads/2017/05/logo-black.png"/>
+            <img className="meetup-speakes-logo-image" alt="logo" src={images['logo']}/>
           </div>
           <div className="meetup-speakers-splash">
             <div className="meetup-speakers-top">
@@ -53,7 +65,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("sartios"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'sartios' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="sartios" src="https://i1.wp.com/react.friends.com.gr/wp-content/uploads/2017/05/14657394_1195907620448125_1177239296511325467_n.jpg"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="sartios" src={images['sartios']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Sartios</div>
@@ -66,7 +78,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("xristina"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'xristina' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="xristina" src="https://i0.wp.com/react.friends.com.gr/wp-content/uploads/2017/05/13220998_10208354938447781_1300075455891503164_n.jpg"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="xristina" src={images['xristina']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Xristina</div>
@@ -79,7 +91,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("nikos"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="nikos" src="https://i2.wp.com/react.friends.com.gr/wp-content/uploads/2017/05/15230811_10154132483616724_6003806463355837262_n.jpg"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Nikos</div>
@@ -92,7 +104,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("dimitris"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'dimitris' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="dimitris" src="https://i2.wp.com/react.friends.com.gr/wp-content/uploads/2017/05/index.png"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="dimitris" src={images['dimitris']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Dimitris</div>
@@ -105,7 +117,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("lefteris"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'lefteris' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="lefteris" src="https://avatars0.githubusercontent.com/u/11925511?v=3&s=400"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="lefteris" src={images['lefteris']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Lefterhs</div>
@@ -118,7 +130,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("pavlos"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'pavlos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="pavlos" src="https://i2.wp.com/react.friends.com.gr/wp-content/uploads/2017/05/13590372_312140005792923_6570737500964967865_n.jpg"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="pavlos" src={images['pavlos']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Pavlos</div>
@@ -131,7 +143,7 @@ export default class Speakers extends Component {
                           onClick={() => { this.handleChangeSpeaker("jamal"); }}
                         >
                           <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'jamal' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="jamal" src="https://digitalmarketing.blob.core.windows.net/8981/images/items/image379833.jpg"></img>
+                            <img className="meetup-speakers-account-logo-image" alt="jamal" src={images['jamal']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Jamal</div>
