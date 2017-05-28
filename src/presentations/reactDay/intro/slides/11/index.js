@@ -3,7 +3,7 @@ import { Heading, Slide, List, ListItem } from "spectacle";
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-      <Heading>Large Scale with React</Heading>
+      <Heading textColor="tertiary">Large Scale with React</Heading>
           <List>
             <ListItem>Flux Pattern</ListItem>
             <ListItem>JSX & ES6: Babel</ListItem>

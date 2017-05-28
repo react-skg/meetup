@@ -27,7 +27,7 @@ preloader(images);
 const theme = createTheme({
   primary: "white",
   secondary: "#1F2022",
-  tertiary: "#03A9FC",
+  tertiary: "#0A7AB9",
   quartenary: "#CECECE"
 }, {
   primary: "Montserrat",

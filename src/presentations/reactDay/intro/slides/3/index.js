@@ -2,8 +2,8 @@ import React from "react";
 import { Heading, Slide, List, ListItem } from "spectacle";
 
 export default (
-    <Slide transition={["fade"]} bgColor="primary" textColor="tertiary">
-      <Heading>What is React JS</Heading>
+    <Slide transition={["fade"]} bgColor="primary">
+      <Heading textColor="tertiary">What is React JS</Heading>
         <List>
           <ListItem>User Interfaces</ListItem>
           <ListItem>Components</ListItem>

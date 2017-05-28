@@ -3,7 +3,7 @@ import { Heading, Slide, List, ListItem } from "spectacle";
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-      <Heading>Virtual DOM</Heading>
+      <Heading textColor="tertiary">Virtual DOM</Heading>
         <List>
           <ListItem>DOM: abstraction of a structured text</ListItem>
           <ListItem>Virtual DOM: abstraction of the HTML DOM</ListItem>

@@ -3,6 +3,6 @@ import { Heading, Slide } from "spectacle";
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-        <Heading>Counter Component Demo Code</Heading>
+        <Heading textColor="tertiary">Counter Component Demo Code</Heading>
     </Slide>
 );
