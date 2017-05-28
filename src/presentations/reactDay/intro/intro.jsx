@@ -1,108 +1,81 @@
-import React, { Component } from 'react';
+// Import React
+import React from "react";
 
-// import {
-//   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-//   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
-// } from 'spectacle';
+// Import Spectacle Core tags
+import { Deck, Slide } from "spectacle";
 
-import { Deck, Text, BlockQuote,
-Quote, ListItem, List, Heading, Link } from 'spectacle';
+// Import image preloader util
+import preloader from "spectacle/lib/utils/preloader";
 
-import IntroSlide from './components/introSlide/introSlide';
+// Import theme
+import createTheme from "spectacle/lib/themes/default";
 
-import { theme } from "../common/themes/darkTheme.js";
+// Require CSS
+require("normalize.css");
+require("spectacle/lib/themes/default/index.css");
 
 
-export default class Intro extends Component {
+const images = {
+  city: require("./assets/city.jpg"),
+  kat: require("./assets/kat.png"),
+  logo: require("./assets/formidable-logo.svg"),
+  markdown: require("./assets/markdown.png")
+};
+
+preloader(images);
+
+const theme = createTheme({
+  primary: "white",
+  secondary: "#1F2022",
+  tertiary: "#03A9FC",
+  quartenary: "#CECECE"
+}, {
+  primary: "Montserrat",
+  secondary: "Helvetica"
+});
+
+const slidesImports = [
+  import("./slides/1"),
+  import("./slides/2"),
+  import("./slides/3"),
+  import("./slides/4"),
+  import("./slides/5"),
+  import("./slides/6"),
+  import("./slides/7"),
+  import("./slides/8"),
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11")
+];
+
+export default class Presentation extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      slides: Array(slidesImports.length).fill(<Slide key="loading" />)
+    };
+  }
+
+  componentDidMount() {
+    const importedSlides = [];
+    Promise.all(slidesImports).then((slidesImportsResolved) => {
+      slidesImportsResolved.forEach((slide) => {
+        importedSlides.push(slide.default);
+      });
+      this.setState({ slides: importedSlides });
+    });
+  }
 
   render() {
+    const { slides } = this.state;
     return (
-      <Deck transition={["zoom"]} theme={theme} transitionDuration={500}>
-        <IntroSlide priority={1}>
-          <Heading size={1} fit caps lineHeight={1}>
-            React JS
-          </Heading>
-          <Heading size={4} lineHeight={1.5} fit caps>
-            Introduction
-          </Heading>
-        </IntroSlide>
-        <IntroSlide priority={2}>
-          <Heading>Today we will talk about...</Heading>
-          <List>
-            <ListItem>What is React JS</ListItem>
-            <ListItem>JSX and Virtual DOM</ListItem>
-            <ListItem>State & Events</ListItem>
-            <ListItem>Going Large Scale with React JS</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={3}>
-          <Heading>What is React JS</Heading>
-          <List>
-            <ListItem>User Interfaces</ListItem>
-            <ListItem>Components</ListItem>
-            <ListItem>JSX Converter</ListItem>
-            <ListItem>Virtual DOM</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={4}>
-          <Heading>Who is using React?  </Heading>
-          <List>
-            <ListItem>Instagram is 100% build on React</ListItem>
-            <ListItem>Facebook has over 15.000 React Components</ListItem>
-            <ListItem>Netflix, Khan Academy, Flipboard, Yahoo</ListItem>
-            <ListItem>Atom Features</ListItem>
-            <ListItem>Wordpress Calypso</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={5}>
-          <Heading>Components</Heading>
-          <List>
-            <ListItem>Model your app as a components hierarchy</ListItem>
-            <ListItem>Each component have props and state</ListItem>
-            <ListItem>React Lifecycle hooks</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={6}>
-          <Heading>Counter Component Demo</Heading>
-        </IntroSlide>
-        <IntroSlide priority={7}>
-          <Heading>Counter Component Demo Code</Heading>
-        </IntroSlide>
-        <IntroSlide priority={8}>
-          <Heading>JSX</Heading>
-          <List>
-            <ListItem>Syntactic sugar for React.createElement</ListItem>
-            <ListItem>React must be in scope</ListItem>
-            <ListItem>Use Dot Notation</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={9}>
-          <Heading>JSX or No JSX</Heading>
-          <Text>JSX Code</Text>
-          <Text>How JSX Code is compiled</Text>
-        </IntroSlide>
-        <IntroSlide priority={10}>
-          <Heading>Virtual DOM</Heading>
-          <List>
-            <ListItem>DOM: abstraction of a structured text</ListItem>
-            <ListItem>Virtual DOM: abstraction of the HTML DOM</ListItem>
-            <ListItem>React computes diffs using Virtual DOM</ListItem>
-            <ListItem>React applies diffs to DOM</ListItem>
-            <ListItem>Re render the app</ListItem>
-          </List>
-        </IntroSlide>
-        <IntroSlide priority={11}>
-          <Heading>Large Scale with React</Heading>
-          <List>
-            <ListItem>Flux Pattern</ListItem>
-            <ListItem>JSX & ES6: Babel</ListItem>
-            <ListItem>Build Tools: Webpack, Grunt, Gulp</ListItem>
-            <ListItem>UI Components: react-bootstrap, materialui</ListItem>
-            <ListItem>Routing: react-router</ListItem>
-            <ListItem>Development: Hot Reload</ListItem>
-            <ListItem>Testing: Karma JS, Jasmine, Jest</ListItem>
-          </List>
-        </IntroSlide>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+        {
+          slides.map((slide, index) => {
+            return React.cloneElement(slide, {key: index});
+          })
+        }
       </Deck>
     );
   }
