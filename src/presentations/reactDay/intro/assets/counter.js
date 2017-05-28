@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Heading } from "spectacle";
 
-export default class Interactive extends Component {
+export default class Counter extends Component {
   constructor() {
     super();
     this.state = {
