@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import mapValues from "lodash/mapValues";
+import CodeSlide from 'spectacle-code-slide';
 // Import theme
 import createTheme from "spectacle/lib/themes/default";
 
@@ -68,11 +69,26 @@ export default class StateManagement extends Component {
             </List>
           </Slide>
 
-          <Slide transition={slideTransition} bgColor="secondary">
-            <Heading size={2} textColor="tertiary">
-              Code Sample
-            </Heading>
-          </Slide>
+          <CodeSlide
+            transition={[]}
+            lang="js"
+            textSize=".6em"
+            code={'var Dispatcher = require(\'flux\').Dispatcher; \n'+
+                  'var AppDispatcher = new Dispatcher();\n\n'+
+                  'AppDispatcher.handleViewAction = function(action) {\n'+
+                    'this.dispatch({\n'+
+                    '  source: \'VIEW_ACTION\',\n'+
+                      'action: action\n'+
+                    '});\n' +
+                    '}\n\n'+
+                    'module.exports = AppDispatcher;'
+                  }
+            ranges={[
+              { loc: [0, 1], title: "Importing flux Dispatcher" },
+              { loc: [2, 3] }, //TodoList Component
+              { loc: [4, 10], title: "Contructor Method" }
+            ]}
+            />
       </Deck>
     );
   }
