@@ -11,15 +11,7 @@ import {
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
-const theme = createTheme({
-  primary: "white",
-  secondary: "black",
-  tertiary: "#09b5c4",
-  quartenary: "rgba(255, 219, 169, 0.43)"
-}, {
-	primary: "Open Sans Condensed"
-});
-
+import { theme } from "../common/themes/darkTheme.js";
 const slideTransition = ["slide"];
 
 const images = mapValues({
@@ -43,10 +35,10 @@ export default class StateManagement extends Component {
               The Problem of State
             </Heading>
             <List>
-              <Appear><ListItem>Application state, UI state</ListItem></Appear>
-              <Appear><ListItem>Where to push it?</ListItem></Appear>
-              <Appear><ListItem>How to manipulate it?</ListItem></Appear>
-              <Appear><ListItem>How to propagate changes to the UI?</ListItem></Appear>
+              <Appear><ListItem textColor="secondary">Application state, UI state</ListItem></Appear>
+              <Appear><ListItem textColor="secondary">Where to push it?</ListItem></Appear>
+              <Appear><ListItem textColor="secondary">How to manipulate it?</ListItem></Appear>
+              <Appear><ListItem textColor="secondary">How to propagate changes to the UI?</ListItem></Appear>
             </List>
         </Slide>
 
@@ -55,15 +47,25 @@ export default class StateManagement extends Component {
               Solutions
             </Heading>
             <List>
-              <Appear><ListItem>Keep it all in React components (<b>App</b>?)</ListItem></Appear>
-              <Appear><ListItem><Link href="https://facebook.github.io/flux/">Flux</Link> - Actions, stores, dispatcher</ListItem></Appear>
-              <Appear><ListItem><Link href="http://redux.js.org/">Redux</Link> - Flux taken to bare minimum</ListItem></Appear>
-              <Appear><ListItem><Link href="https://mobxjs.github.io/mobx/">MobX</Link> - Observables, think spreadsheets</ListItem></Appear>
+              <Appear><ListItem textColor="secondary">Keep it all in React components (<b>App</b>?)</ListItem></Appear>
+              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="https://facebook.github.io/flux/">Flux</Link> - Actions, stores, dispatcher</ListItem></Appear>
+              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="http://redux.js.org/">Redux</Link> - Flux taken to bare minimum</ListItem></Appear>
+              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="https://mobxjs.github.io/mobx/">MobX</Link> - Observables, think spreadsheets</ListItem></Appear>
             </List>
           </Slide>
 
           <Slide transition={slideTransition}>
               <Image src={images.flux} margin="40px auto" height="324px" />
+          </Slide>
+
+          <Slide transition={slideTransition} bgColor="secondary">
+            <Heading size={1}>
+              The Dispatcher
+            </Heading>
+            <List>
+              <Appear><ListItem textColor="primary">There is only ever one dispatcher</ListItem></Appear>
+              <Appear><ListItem textColor="primary">It acts as the central hub for your application</ListItem></Appear>
+            </List>
           </Slide>
 
           <Slide transition={slideTransition} bgColor="secondary">

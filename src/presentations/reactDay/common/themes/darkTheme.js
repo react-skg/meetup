@@ -1,12 +1,12 @@
 import createTheme from "spectacle/lib/themes/default";
 
 const initialTheme = createTheme({
-	primary: "#042B35",
-	secondary: "#D2A03E",
-	tertiary: "#FD853D",
-	quartenary: "#A7A7A7",
+	primary: "white",
+	secondary: "black",
+	tertiary: "#09b5c4",
+	quartenary: "rgba(255, 219, 169, 0.43)",
 }, {
-	primary: "Menlo"
+	primary: "Open Sans Condensed"
 });
 
 export const theme = {
