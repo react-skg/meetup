@@ -5,7 +5,7 @@ import './speakers.css';
 
 const routes = {
   sartios: '/intro',
-  xristina: '/state-management',
+  christina: '/state-management',
   nikos: '/react-native',
   dimitris: '/react-redux',
   lefteris: '/react-router',
@@ -17,7 +17,7 @@ const images = {
   pavlos: require("../../../../assets/pavlos.jpg"),
   dimitris: require("../../../../assets/dimitris.png"),
   nikos: require("../../../../assets/nikos.jpg"),
-  xristina: require("../../../../assets/xristina.jpg"),
+  christina: require("../../../../assets/xristina.jpg"),
   lefteris: require("../../../../assets/lefteris.jpg"),
   sartios: require("../../../../assets/sartios.jpg"),
   jamal: require("../../../../assets/jamal.jpg"),
@@ -72,29 +72,16 @@ export default class Speakers extends Component {
                       </div>
                     </div>
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'xristina' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'christina' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("xristina"); }}
+                          onClick={() => { this.handleChangeSpeaker("christina"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'xristina' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="xristina" src={images['xristina']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'christina' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="christina" src={images['christina']}></img>
                           </div>
                         </div>
-                        <div className="meetup-speakers-account-name">Xristina</div>
-                      </div>
-                    </div>
-                    <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                        <div
-                          className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
-                        >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
-                          </div>
-                        </div>
-                        <div className="meetup-speakers-account-name">Nikos</div>
+                        <div className="meetup-speakers-account-name">Christina</div>
                       </div>
                     </div>
                     <div className="meetup-speakers-account-wrapper">
@@ -108,6 +95,19 @@ export default class Speakers extends Component {
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Dimitris</div>
+                      </div>
+                    </div>
+                    <div className="meetup-speakers-account-wrapper">
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                        <div
+                          className="meetup-speakers-account"
+                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
+                        >
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
+                          </div>
+                        </div>
+                        <div className="meetup-speakers-account-name">Nikos</div>
                       </div>
                     </div>
                     <div className="meetup-speakers-account-wrapper">
@@ -157,7 +157,7 @@ export default class Speakers extends Component {
           <div className="meetup-speakers-actions">
             <Link to={routes[this.state.speaker]}>
               <button className="meetup-speakers-actions-button">
-                {`Show ${this.state.speaker} Presentation`}
+                {`Show ${this.state.speaker}'s Presentation`}
               </button>
             </Link>
           </div>

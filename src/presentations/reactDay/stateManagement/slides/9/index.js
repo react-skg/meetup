@@ -6,7 +6,7 @@ export default (
     transition={[]}
     lang="js"
     textSize=".6em"
-    code={`var Dispatcher = require(\'flux\').Dispatcher; \n`+
+    code={`var Dispatcher = require('flux').Dispatcher; \n`+
           `var AppDispatcher = new Dispatcher();\n`+
           'AppDispatcher.handleViewAction = function(action) {\n'+
             'this.dispatch({\n'+
