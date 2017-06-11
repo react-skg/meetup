@@ -1,94 +1,51 @@
-import React, { Component } from 'react';
-import mapValues from "lodash/mapValues";
-import CodeSlide from 'spectacle-code-slide';
-// Import theme
-import createTheme from "spectacle/lib/themes/default";
+// Import React
+import React, { Component } from "react";
 
-import {
-   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-   Heading, Image, Layout, ListItem, List,Link, Quote, Slide, Text,
-} from 'spectacle';
-
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-
+// Import Spectacle Core tags
+import { Deck, Slide } from "spectacle";
+// Import theme fro the Deck
 import { theme } from "../common/themes/darkTheme.js";
-const slideTransition = ["slide"];
+// All slides
+const slidesImports = [
+  import("./slides/1"),
+  import("./slides/2"),
+  import("./slides/3"),
+  import("./slides/4"),
+  import("./slides/5"),
+  import("./slides/6"),
+  import("./slides/7"),
+  import("./slides/8"),
+  import("./slides/9")
+];
 
-const images = mapValues({
-  flux: require("./assets/flux.png")
-}, v => v.replace('/', ''));
+export default class Presentation extends Component {
+  constructor(props) {
+    super(props);
 
-preloader(images);
+    this.state = {
+      slides: Array(slidesImports.length).fill(<Slide key="loading" />)
+    }
+  }
 
-export default class StateManagement extends Component {
+  componentDidMount() {
+    const importedSlides = [];
+    Promise.all(slidesImports).then((slidesImportsResolved) => {
+      slidesImportsResolved.forEach((slide) => {
+        importedSlides.push(slide.default);
+      });
+      this.setState({ slides: importedSlides });
+    });
+  }
+
   render() {
+    const { slides } = this.state;
     return (
-      <Deck theme={theme} transition={slideTransition} transitionDuration={500} progress="pacman">
-        <Slide transition={slideTransition} bgColor="secondary">
-            <Heading size={1} fit caps lineHeight={1} textColor="tertiary">
-              State Management in React
-            </Heading>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-            <Heading size={1}>
-              The Problem of State
-            </Heading>
-            <List>
-              <Appear><ListItem textColor="secondary">Application state, UI state</ListItem></Appear>
-              <Appear><ListItem textColor="secondary">Where to push it?</ListItem></Appear>
-              <Appear><ListItem textColor="secondary">How to manipulate it?</ListItem></Appear>
-              <Appear><ListItem textColor="secondary">How to propagate changes to the UI?</ListItem></Appear>
-            </List>
-        </Slide>
-
-        <Slide transition={slideTransition}>
-            <Heading size={1}>
-              Solutions
-            </Heading>
-            <List>
-              <Appear><ListItem textColor="secondary">Keep it all in React components (<b>App</b>?)</ListItem></Appear>
-              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="https://facebook.github.io/flux/">Flux</Link> - Actions, stores, dispatcher</ListItem></Appear>
-              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="http://redux.js.org/">Redux</Link> - Flux taken to bare minimum</ListItem></Appear>
-              <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="https://mobxjs.github.io/mobx/">MobX</Link> - Observables, think spreadsheets</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <Slide transition={slideTransition}>
-              <Image src={images.flux} margin="40px auto" height="324px" />
-          </Slide>
-
-          <Slide transition={slideTransition} bgColor="secondary">
-            <Heading size={1}>
-              The Dispatcher
-            </Heading>
-            <List>
-              <Appear><ListItem textColor="primary">There is only ever one dispatcher</ListItem></Appear>
-              <Appear><ListItem textColor="primary">It acts as the central hub for your application</ListItem></Appear>
-            </List>
-          </Slide>
-
-          <CodeSlide
-            transition={[]}
-            lang="js"
-            textSize=".6em"
-            code={'var Dispatcher = require(\'flux\').Dispatcher; \n'+
-                  'var AppDispatcher = new Dispatcher();\n\n'+
-                  'AppDispatcher.handleViewAction = function(action) {\n'+
-                    'this.dispatch({\n'+
-                    '  source: \'VIEW_ACTION\',\n'+
-                      'action: action\n'+
-                    '});\n' +
-                    '}\n\n'+
-                    'module.exports = AppDispatcher;'
-                  }
-            ranges={[
-              { loc: [0, 1], title: "Importing flux Dispatcher" },
-              { loc: [2, 3] }, //TodoList Component
-              { loc: [4, 10], title: "Contructor Method" }
-            ]}
-            />
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+        {
+          slides.map((slide, index) => {
+            return React.cloneElement(slide, {key: index});
+          })
+        }
       </Deck>
     );
   }
