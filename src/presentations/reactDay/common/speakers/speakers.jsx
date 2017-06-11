@@ -45,7 +45,7 @@ export default class Speakers extends Component {
       >
         <div className="meetup-speakers-container">
           <div className="meetup-speakes-logo-container">
-            <img className="meetup-speakes-logo-image" alt="logo" src={images['logo']}/>
+            <img className="meetup-speakes-logo-image" style={{ paddingTop: '33px' }} width="400" alt="logo" src={images['logo']}/>
           </div>
           <div className="meetup-speakers-splash">
             <div className="meetup-speakers-top">
