@@ -6,7 +6,7 @@ const initialTheme = createTheme({
 	tertiary: "#09b5c4",
 	quartenary: "rgba(255, 219, 169, 0.43)",
 }, {
-	primary: "Open Sans Condensed"
+	primary: { name: "Droid Serif", googleFont: true, styles: [ "400", "700i" ] }
 });
 
 export const theme = {
@@ -25,7 +25,7 @@ export const theme = {
 			},
 			link: {
 				...initialTheme.screen.components.link,
-				color: initialTheme.screen.colors.secondary
+				color: initialTheme.screen.colors.tertiary
 			}
 		}
 	}
