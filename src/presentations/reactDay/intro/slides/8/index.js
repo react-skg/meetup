@@ -1,8 +1,13 @@
 import React from "react";
-import { Heading, Slide } from "spectacle";
+import { Slide, Image } from "spectacle";
+import preloader from "spectacle/lib/utils/preloader";
+
+const images = {
+  counter: require("../../assets/counter.png")
+};
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-        <Heading textColor="tertiary">Counter Component Demo Code</Heading>
+        <Image key="1" className="bounceIn animated" src={images.counter.replace("/", "")} margin="0px auto 40px" height="700px"/>
     </Slide>
 );
