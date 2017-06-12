@@ -3,7 +3,7 @@ import React from "react";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
-import { Heading, Slide, List, ListItem, Appear, Image } from "spectacle";
+import { Heading, Slide, List, ListItem, Appear, Image, Link } from "spectacle";
 
 import './slide5.post.css';
 
@@ -43,6 +43,11 @@ export default (
           <Image key="10" className="bounceIn animated" src={images.reddit.replace("/", "")} margin="0px auto 40px" height="120px"/>
           <Image key="11" className="bounceIn animated" src={images.wordpress.replace("/", "")} margin="0px auto 40px" height="120px"/>
           <Image key="12" className="bounceIn animated" src={images.yahoo.replace("/", "")} margin="0px auto 40px" height="120px"/>
+        </div>
+        <div className="intro-presentation-react-users-link bounceIn animated">
+          <Link
+            href="https://github.com/facebook/react/wiki/sites-using-react"
+            target="_blank">More React Users</Link>
         </div>
     </Slide>
 );
