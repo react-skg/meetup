@@ -8,7 +8,9 @@ import { Deck, Slide } from "spectacle";
 import { theme } from "../common/themes/darkTheme.js";
 
 // Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";-
+import preloader from "spectacle/lib/utils/preloader";
+
+import '../../../stylesheets/animate.css';
 
 // Require CSS
 require("normalize.css");
