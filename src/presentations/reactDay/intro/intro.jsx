@@ -7,24 +7,11 @@ import { Deck, Slide } from "spectacle";
 // Import theme fro the Deck
 import { theme } from "../common/themes/darkTheme.js";
 
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-
 import '../../../stylesheets/animate.css';
 
 // Require CSS
 require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
-
-const images = {
-  city: require("./assets/city.jpg"),
-  kat: require("./assets/kat.png"),
-  logo: require("./assets/formidable-logo.svg"),
-  markdown: require("./assets/markdown.png")
-};
-
-preloader(images);
 
 const slidesImports = [
   import("./slides/1"),
@@ -37,7 +24,9 @@ const slidesImports = [
   import("./slides/8"),
   import("./slides/9"),
   import("./slides/10"),
-  import("./slides/11")
+  import("./slides/11"),
+  import("./slides/12")
+
 ];
 
 export default class Presentation extends Component {
