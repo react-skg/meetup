@@ -1,0 +1,6 @@
+.intro-presentation-author {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 50px;
+  font-size: 30px;
+}
