@@ -27,8 +27,8 @@ const images = {
 
 export default class Speakers extends Component {
   constructor(props){
-  	super(props);
-  	this.state = {
+    super(props);
+    this.state = {
       speaker: 'sartios'
     };
   }
@@ -45,7 +45,7 @@ export default class Speakers extends Component {
       >
         <div className="meetup-speakers-container">
           <div className="meetup-speakes-logo-container">
-            <img className="meetup-speakes-logo-image" alt="logo" src={images['logo']}/>
+            <img className="meetup-speakes-logo-image" style={{ paddingTop: '33px' }} width="400" alt="logo" src={images['logo']}/>
           </div>
           <div className="meetup-speakers-splash">
             <div className="meetup-speakers-top">
@@ -120,7 +120,7 @@ export default class Speakers extends Component {
                             <img className="meetup-speakers-account-logo-image" alt="lefteris" src={images['lefteris']}></img>
                           </div>
                         </div>
-                        <div className="meetup-speakers-account-name">Lefterhs</div>
+                        <div className="meetup-speakers-account-name">Lefteris</div>
                       </div>
                     </div>
                     <div className="meetup-speakers-account-wrapper">
@@ -157,7 +157,8 @@ export default class Speakers extends Component {
           <div className="meetup-speakers-actions">
             <Link to={routes[this.state.speaker]}>
               <button className="meetup-speakers-actions-button">
-                {`Show ${this.state.speaker}'s Presentation`}
+                {`Show ${this.state.speaker} Presentation`}
+                {`Start ${this.state.speaker}'s Presentation`}
               </button>
             </Link>
           </div>

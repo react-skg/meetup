@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import { Deck, Slide } from "spectacle";
 // Import theme fro the Deck
 import { theme } from "../common/themes/darkTheme.js";
+import './stateManagement.css';
 // All slides
 const slidesImports = [
   import("./slides/1"),
