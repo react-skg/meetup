@@ -5,9 +5,9 @@ export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading textColor="tertiary">Components</Heading>
         <List>
-            <Appear><ListItem>Design as Component Hierarchy</ListItem></Appear>
-          <Appear><ListItem>Data as props and state</ListItem></Appear>
-          <Appear><ListItem>Workflow as Lifecycle hooks</ListItem></Appear>
+            <Appear><ListItem>Building Block</ListItem></Appear>
+          <Appear><ListItem>Props and State</ListItem></Appear>
+          <Appear><ListItem>Lifecycle</ListItem></Appear>
         </List>
     </Slide>
 );
