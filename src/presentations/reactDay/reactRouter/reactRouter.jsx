@@ -1,13 +1,26 @@
 import React, { Component } from 'react';
+import CodeSlide from 'spectacle-code-slide';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
+import { simpleRouterCode, playGroundCode } from './assets';
+import routerImage from '../../../assets/react-router/simpleRouter.PNG';
 // import {
 //   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
 //   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
 // } from 'spectacle';
 
-import { Deck, Slide, Text, Appear, List, ListItem, Heading } from 'spectacle';
+import { Deck, Slide, Text, Appear, List, ListItem, Heading, Code, ComponentPlayground } from 'spectacle';
 
 import { theme } from '../common/themes/darkTheme';
+
+const style = {
+  position: 'fixed',
+  bottom: '20px',
+  width: '100%',
+  padding: '20px',
+  fontFamily: 'monospace',
+  textAlign: 'left',
+};
 
 export default class ReactRouter extends Component {
   constructor(props) {
@@ -39,7 +52,7 @@ export default class ReactRouter extends Component {
         <Slide transition={['zoom']} bgColor="primary">
           <Heading textColor="#000" textSize="55px">
             <code>react-router</code> / What is it?
-            </Heading>
+          </Heading>
           <List>
             <Appear>
               <ListItem textSize="35px">
@@ -66,8 +79,8 @@ export default class ReactRouter extends Component {
             </Appear>
             <Appear>
               <ListItem textSize="35px">
-                  Prompt users when the route will change in order for them not to lose unsaved data.
-                </ListItem>
+                Prompt users when the route will change in order for them not to lose unsaved data.
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="35px">
@@ -78,11 +91,36 @@ export default class ReactRouter extends Component {
             </Appear>
           </List>
         </Slide>
-        <Slide id="slide2">
-          <Text>ReactRouter 2</Text>
-        </Slide>
+        <CodeSlide
+          style={style}
+          transition={[]}
+          lang="js"
+          code={simpleRouterCode}
+          ranges={[
+            { loc: [0, 1], note: 'Import the components that your routes will lead to.' },
+            { loc: [2, 6], note: 'Importing the <Router/> and <Route/> components' },
+            { loc: [9, 23],
+              image: routerImage,
+              note: 'Each route will create an element. Notice the exact prop, \
+              because we don\'t want <Speakers /> to be rendered in every route.' },
+          ]}
+        />
         <Slide id="slide3">
+          <Heading textColor="#000" textSize="55px">
+            <code>react-router</code> / Components
+          </Heading>
           <Text>ReactRouter 3</Text>
+        </Slide>
+        <Slide transition={['zoom']}>
+          <ComponentPlayground
+            theme="light"
+            code={playGroundCode}
+            scope={{
+              Router,
+              Route,
+              Switch,
+            }}
+          />
         </Slide>
         <Slide id="slide4">
           <Text>ReactRouter 4</Text>
