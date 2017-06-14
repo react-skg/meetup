@@ -1,13 +1,15 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Heading, Slide, List } from "spectacle";
+
+import ListItemControl from '../../components/listItemControl/listItemControl'
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading textColor="tertiary">Components</Heading>
         <List>
-            <Appear><ListItem>Building Block</ListItem></Appear>
-          <Appear><ListItem>Props and State</ListItem></Appear>
-          <Appear><ListItem>Lifecycle</ListItem></Appear>
+          <ListItemControl>Building Block</ListItemControl>
+          <ListItemControl>Props and State</ListItemControl>
+          <ListItemControl>Lifecycle</ListItemControl>
         </List>
     </Slide>
 );

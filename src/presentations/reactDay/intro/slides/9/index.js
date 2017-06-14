@@ -1,13 +1,15 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Heading, Slide, List } from "spectacle";
+
+import ListItemControl from '../../components/listItemControl/listItemControl';
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading textColor="tertiary">JSX</Heading>
         <List>
-          <Appear><ListItem>XML/HTML-like text</ListItem></Appear>
-          <Appear><ListItem>Preprocessors transform to js</ListItem></Appear>
-          <Appear><ListItem>React.createElement()</ListItem></Appear>
+          <ListItemControl>XML/HTML-like text</ListItemControl>
+          <ListItemControl>Preprocessors transform to js</ListItemControl>
+          <ListItemControl>React.createElement()</ListItemControl>
         </List>
     </Slide>
 );
