@@ -11,6 +11,13 @@ export default class Counter extends Component {
     };
     this.handleClick = this.handleClick.bind(this);
   }
+
+  getLifecycles() {
+    return [ 'componentWillMount', 'componentDidMount', 'componentWillReceiveProps',
+      'shouldComponentUpdate', 'componentWillUpdate', 'componentDidUpdate','componentWillUnmount'
+    ];
+  }
+
   handleClick() {
     this.setState({
       count: this.state.count + 1
@@ -18,7 +25,7 @@ export default class Counter extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="intro-presentation-counter-container">
       {this.state.count < 5 ?
         <div>
           <Heading fit size={5} textColor="black">
