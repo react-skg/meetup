@@ -12,7 +12,7 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={"zoom"}>
+  <Slide transition={"zoom"} style={{ alignItems: "flex-start" }}>
     <Heading size={1}>
       Stores
     </Heading>
