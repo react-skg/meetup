@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './speakers.css';
 
 const routes = {
-  sartios: '/intro', 
+  sartios: '/intro',
   christina: '/state-management',
   nikos: '/react-native',
   dimitris: '/react-redux',
@@ -163,7 +163,6 @@ export default class Speakers extends Component {
           <div className="meetup-speakers-actions">
             <Link to={routes[this.state.speaker]}>
               <button className="meetup-speakers-actions-button">
-                {`Show ${this.state.speaker} Presentation`}
                 {`Start ${this.state.speaker}'s Presentation`}
               </button>
             </Link>
