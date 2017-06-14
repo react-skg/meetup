@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Heading } from "spectacle";
 
+import './counter.post.css';
+
 export default class Counter extends Component {
   constructor() {
     super();
@@ -15,18 +17,6 @@ export default class Counter extends Component {
     });
   }
   render() {
-    const styles = {
-      padding: 20,
-      background: "black",
-      minWidth: 300,
-      marginTop: 20,
-      textTransform: "uppercase",
-      border: "none",
-      color: "white",
-      outline: "none",
-      fontWeight: "bold",
-      fontSize: "2em"
-    };
     return (
       <div>
       {this.state.count < 5 ?
@@ -34,7 +24,7 @@ export default class Counter extends Component {
           <Heading fit size={5} textColor="black">
             The button has been clicked {this.state.count} times
           </Heading>
-          <button style={styles} type="button" onClick={this.handleClick}>Click Me</button>
+          <button className="intro-presentation-counter-btn" type="button" onClick={this.handleClick}>Click Me</button>
         </div> :
           <Heading size={5} fit caps textColor="black">Easy there pal</Heading>
         }
