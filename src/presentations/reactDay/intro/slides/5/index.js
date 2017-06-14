@@ -1,9 +1,6 @@
 import React from "react";
 
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
-
-import { Heading, Slide, List, ListItem, Appear, Image, Link } from "spectacle";
+import { Slide, Image, Link } from "spectacle";
 
 import './slide5.post.css';
 

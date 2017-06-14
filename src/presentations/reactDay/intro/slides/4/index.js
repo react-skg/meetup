@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear, Image } from "spectacle";
+import { Heading, Slide } from "spectacle";
 
 export default (
     <Slide transition={["fade"]} bgColor="primary">

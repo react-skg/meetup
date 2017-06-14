@@ -1,6 +1,5 @@
 import React from "react";
 import { Slide, Image } from "spectacle";
-import preloader from "spectacle/lib/utils/preloader";
 
 const images = {
   counter: require("../../assets/counter.png")

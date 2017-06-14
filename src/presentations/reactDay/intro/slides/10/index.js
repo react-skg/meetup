@@ -1,6 +1,5 @@
 import React from "react";
 import { Heading, Slide, Image } from "spectacle";
-import preloader from "spectacle/lib/utils/preloader";
 
 const images = {
   jsx: require("../../assets/jsx.png")
