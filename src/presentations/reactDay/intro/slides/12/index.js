@@ -7,8 +7,8 @@ export default (
           <List>
             <ListItem>Flux Pattern</ListItem>
             <ListItem>JSX & ES6: Babel</ListItem>
-            <ListItem>Build Tools: Webpack, Grunt, Gulp</ListItem>
-            <ListItem>UI Components: react-bootstrap, materialui</ListItem>
+            <ListItem>Build Tools: Webpack</ListItem>
+            <ListItem>UI Components: react-bootstrap</ListItem>
             <ListItem>Routing: react-router</ListItem>
             <ListItem>Development: Hot Reload</ListItem>
             <ListItem>Testing: Karma JS, Jasmine, Jest</ListItem>
