@@ -26,7 +26,25 @@ export const theme = {
 			link: {
 				...initialTheme.screen.components.link,
 				color: initialTheme.screen.colors.tertiary
-			}
+			},
+		},
+		progress: {
+			...initialTheme.screen.progress,
+			pacman: {
+				...initialTheme.screen.progress.pacman,
+				pacmanBottom: {
+					...initialTheme.screen.progress.pacman.pacmanBottom,
+					background: initialTheme.screen.colors.tertiary
+				},
+				pacmanTop: {
+					...initialTheme.screen.progress.pacman.pacmanTop,
+					background: initialTheme.screen.colors.tertiary
+				},
+				point: {
+					...initialTheme.screen.progress.pacman.point,
+					borderColor: initialTheme.screen.colors.tertiary
+				}
+			},
 		}
 	}
 };
