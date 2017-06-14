@@ -13,3 +13,27 @@ li:nth-child(2) {
 li:nth-child(3) {
   animation-delay: 1s;
 }
+
+li:nth-child(4) {
+  animation-delay: 1.1s;
+}
+
+li:nth-child(5) {
+  animation-delay: 1.2s;
+}
+
+li:nth-child(6) {
+  animation-delay: 1.3s;
+}
+
+li:nth-child(7) {
+  animation-delay: 1.4s;
+}
+
+li:nth-child(8) {
+  animation-delay: 1.5s;
+}
+
+li:nth-child(9) {
+  animation-delay: 1.6s;
+}
