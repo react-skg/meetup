@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './speakers.css';
 
 const routes = {
-  sartios: '/intro',
+  sartios: '/intro', 
   christina: '/state-management',
   nikos: '/react-native',
   dimitris: '/react-redux',
@@ -51,7 +51,7 @@ export default class Speakers extends Component {
             <div className="meetup-speakers-top">
               <div className="meetup-speakers-datetime-container">
                 <div className="meetup-speakers-datetime">
-                  <div className="meetup-speakers-datetime-time">11:00 AM</div>
+                  <div className="meetup-speakers-datetime-time"></div>
                 <div className="meetup-speakers-datetime-date">Saturday, June 17th, 2017</div>
                 </div>
               </div>
@@ -71,6 +71,7 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Sartios</div>
                       </div>
                     </div>
+
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'christina' ? 'active' : ''}`}>
                         <div
@@ -84,6 +85,7 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Christina</div>
                       </div>
                     </div>
+
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'dimitris' ? 'active' : ''}`}>
                         <div
@@ -97,19 +99,7 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Dimitris</div>
                       </div>
                     </div>
-                    <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                        <div
-                          className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
-                        >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
-                          </div>
-                        </div>
-                        <div className="meetup-speakers-account-name">Nikos</div>
-                      </div>
-                    </div>
+
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'lefteris' ? 'active' : ''}`}>
                         <div
@@ -123,6 +113,7 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Lefterhs</div>
                       </div>
                     </div>
+
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'pavlos' ? 'active' : ''}`}>
                         <div
@@ -136,6 +127,21 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Pavlos</div>
                       </div>
                     </div>
+
+                    <div className="meetup-speakers-account-wrapper">
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                        <div
+                          className="meetup-speakers-account"
+                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
+                        >
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
+                          </div>
+                        </div>
+                        <div className="meetup-speakers-account-name">Nikos</div>
+                      </div>
+                    </div>
+
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'jamal' ? 'active' : ''}`}>
                         <div
