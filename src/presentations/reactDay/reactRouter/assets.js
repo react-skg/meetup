@@ -95,7 +95,10 @@ class RouterLiveExample extends React.Component {
 
   renderAlwaysMatching = (props) => (
     <div style={{ color: 'darkblue' }}>
-      <b>I 'm always here no matter what but if my path does not match, my match prop is <code>null</code>.</b>
+      <b>
+        I 'm always here no matter what but if my path
+        does not match, my match prop is <code>null</code>.
+      </b>
       <p>{JSON.stringify(props)}</p>
     </div>
   )

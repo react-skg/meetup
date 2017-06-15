@@ -12,6 +12,7 @@ import routerImage from '../../../assets/react-router/simpleRouter.PNG';
 import { Deck, Slide, Text, Appear, List, ListItem, Heading, Code, ComponentPlayground } from 'spectacle';
 
 import { theme } from '../common/themes/darkTheme';
+import './reactRouter.post.css';
 
 const style = {
   position: 'fixed',
@@ -112,17 +113,19 @@ export default class ReactRouter extends Component {
           <Text>ReactRouter 3</Text>
         </Slide>
         <Slide transition={['zoom']}>
-          <ComponentPlayground
-            theme="light"
-            code={playGroundCode}
-            scope={{
-              Router,
-              Route,
-              Switch,
-              Redirect,
-              Prompt,
-            }}
-          />
+          <div id="react-router-playground">
+            <ComponentPlayground
+              theme="light"
+              code={playGroundCode}
+              scope={{
+                Router,
+                Route,
+                Switch,
+                Redirect,
+                Prompt,
+              }}
+            />
+          </div>
         </Slide>
         <Slide id="slide4">
           <Text>ReactRouter 4</Text>
