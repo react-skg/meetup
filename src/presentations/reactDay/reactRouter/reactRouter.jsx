@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import CodeSlide from 'spectacle-code-slide';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect, Prompt } from 'react-router-dom';
 
 import { simpleRouterCode, playGroundCode } from './assets';
 import routerImage from '../../../assets/react-router/simpleRouter.PNG';
@@ -119,6 +119,8 @@ export default class ReactRouter extends Component {
               Router,
               Route,
               Switch,
+              Redirect,
+              Prompt,
             }}
           />
         </Slide>
