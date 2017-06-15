@@ -1,16 +1,15 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Heading, Slide, List, ListItem, Appear, Link } from "spectacle";
 
 export default (
   <Slide transition={["slide"]}>
       <Heading size={1}>
-        The Problem of State
+        Solutions
       </Heading>
       <List>
-        <Appear><ListItem textColor="secondary">Application state, UI state</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">Where to push it?</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">How to manipulate it?</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">How to propagate changes to the UI?</ListItem></Appear>
+        <Appear><ListItem textColor="secondary">Keep it all in React components (<b>App</b>?)</ListItem></Appear>
+        <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="https://facebook.github.io/flux/">Flux</Link> - Actions, stores, dispatcher</ListItem></Appear>
+        <Appear><ListItem textColor="secondary"><Link textColor="tertiary" href="http://redux.js.org/">Redux</Link> - Flux taken to bare minimum</ListItem></Appear>
       </List>
-  </Slide>
+    </Slide>
 );

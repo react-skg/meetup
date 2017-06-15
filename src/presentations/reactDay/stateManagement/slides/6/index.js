@@ -17,7 +17,7 @@ export default (
       Stores
     </Heading>
     <List>
-      <Appear><ListItem textColor="secondary">Contain application state and logic</ListItem></Appear>
+      <Appear><ListItem textColor="secondary">Containers for application state & logic that have callbacks registered to the dispatcher</ListItem></Appear>
       <Appear><ListItem textColor="secondary">Register themselves to the dispatcher with a callback.The callback receives one argument – the action</ListItem></Appear>
       <Appear><Image src={images.stores} margin="30px" height="300px" /></Appear>
     </List>

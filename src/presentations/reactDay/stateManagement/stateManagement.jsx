@@ -16,7 +16,10 @@ const slidesImports = [
   import("./slides/6"),
   import("./slides/7"),
   import("./slides/8"),
-  import("./slides/9")
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11"),
+  import("./slides/12")
 ];
 
 export default class Presentation extends Component {
