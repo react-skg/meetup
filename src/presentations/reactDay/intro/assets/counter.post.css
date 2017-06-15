@@ -1,0 +1,12 @@
+.intro-presentation-counter-btn {
+  padding: 20px;
+  background: black;
+  min-width: 300px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  border: none;
+  color: white;
+  outline: none;
+  font-weight: bold;
+  font-size: 2em;
+}
