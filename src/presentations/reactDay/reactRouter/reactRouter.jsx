@@ -115,7 +115,7 @@ export default class ReactRouter extends Component {
         <Slide transition={['zoom']}>
           <div id="react-router-playground">
             <ComponentPlayground
-              theme="light"
+              theme="dark"
               code={playGroundCode}
               scope={{
                 Router,

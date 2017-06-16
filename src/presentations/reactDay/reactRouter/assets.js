@@ -40,9 +40,8 @@ class RouterLiveExample extends React.Component {
     };
   }
 
-  handleAuthorization = () => {
+  handleAuthorization = () =>
     this.setState({ authorized: !this.state.authorized });
-  };
 
   renderLogin = () => (
     <div>
@@ -139,6 +138,7 @@ class RouterLiveExample extends React.Component {
     );
   }
 }
+
 render(<RouterLiveExample />, mountNode);
 `;
 
