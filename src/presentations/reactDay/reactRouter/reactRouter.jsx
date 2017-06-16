@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import CodeSlide from 'spectacle-code-slide';
-import { BrowserRouter as Router, Route, Switch, Redirect, Prompt } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import { simpleRouterCode, playGroundCode } from './assets';
 import routerImage from '../../../assets/react-router/simpleRouter.PNG';
-// import {
-//   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-//   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
-// } from 'spectacle';
 
-import { Deck, Slide, Text, Appear, List, ListItem, Heading, Code, ComponentPlayground } from 'spectacle';
+import { Deck, Slide, Appear, List, ListItem, Heading, ComponentPlayground } from 'spectacle';
 
 import { theme } from '../common/themes/darkTheme';
 import './reactRouter.post.css';
