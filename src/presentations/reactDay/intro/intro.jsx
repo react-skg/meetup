@@ -1,38 +1,17 @@
 // Import React
-import React from "react";
+import React, { Component } from "react";
 
 // Import Spectacle Core tags
 import { Deck, Slide } from "spectacle";
 
-// Import image preloader util
-import preloader from "spectacle/lib/utils/preloader";
+// Import theme fro the Deck
+import { theme } from "../common/themes/darkTheme.js";
 
-// Import theme
-import createTheme from "spectacle/lib/themes/default";
+import '../../../stylesheets/animate.css';
 
 // Require CSS
 // require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
-
-
-const images = {
-  city: require("./assets/city.jpg"),
-  kat: require("./assets/kat.png"),
-  logo: require("./assets/formidable-logo.svg"),
-  markdown: require("./assets/markdown.png")
-};
-
-preloader(images);
-
-const theme = createTheme({
-  primary: "white",
-  secondary: "#1F2022",
-  tertiary: "#0A7AB9",
-  quartenary: "#CECECE"
-}, {
-  primary: "Montserrat",
-  secondary: "Helvetica"
-});
 
 const slidesImports = [
   import("./slides/1"),
@@ -45,10 +24,13 @@ const slidesImports = [
   import("./slides/8"),
   import("./slides/9"),
   import("./slides/10"),
-  import("./slides/11")
+  import("./slides/11"),
+  import("./slides/12"),
+  import("./slides/13"),
+  import("./slides/14")
 ];
 
-export default class Presentation extends React.Component {
+export default class Presentation extends Component {
   constructor(props) {
     super(props);
 

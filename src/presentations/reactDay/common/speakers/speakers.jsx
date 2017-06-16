@@ -85,7 +85,6 @@ export default class Speakers extends Component {
                         <div className="meetup-speakers-account-name">Christina</div>
                       </div>
                     </div>
-
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'dimitris' ? 'active' : ''}`}>
                         <div
@@ -97,6 +96,20 @@ export default class Speakers extends Component {
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Dimitris</div>
+                      </div>
+                    </div>
+
+                    <div className="meetup-speakers-account-wrapper">
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                        <div
+                          className="meetup-speakers-account"
+                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
+                        >
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
+                          </div>
+                        </div>
+                        <div className="meetup-speakers-account-name">Nick</div>
                       </div>
                     </div>
 

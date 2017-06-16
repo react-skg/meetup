@@ -1,11 +1,15 @@
 import React from "react";
-import { Heading, Slide } from "spectacle";
+import { Heading, Slide, List } from "spectacle";
 
-import Counter from '../../assets/counter';
+import ListItemControl from '../../components/listItemControl/listItemControl'
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-        <Heading textColor="tertiary">Counter Component Demo</Heading>
-        <Counter />
+      <Heading textColor="tertiary">Components</Heading>
+        <List>
+          <ListItemControl>Building Block</ListItemControl>
+          <ListItemControl>Props and State</ListItemControl>
+          <ListItemControl>Lifecycle</ListItemControl>
+        </List>
     </Slide>
 );
