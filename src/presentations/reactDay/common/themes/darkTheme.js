@@ -5,6 +5,7 @@ const initialTheme = createTheme({
 	secondary: "black",
 	tertiary: "#09b5c4",
 	quartenary: "rgba(255, 219, 169, 0.43)",
+	fifth:"#282c34"
 }, {
 	primary: { name: "Droid Serif", googleFont: true, styles: [ "400", "700i" ] }
 });

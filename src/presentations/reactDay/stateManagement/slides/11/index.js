@@ -6,7 +6,7 @@ import mapValues from "lodash/mapValues";
 import preloader from "spectacle/lib/utils/preloader";
 
 const images = mapValues({
-  appActions: require("../../assets/appActions.png")
+  appView: require("../../assets/appView.png")
 }, v => v.replace('/', ''));
 
 preloader(images);
@@ -14,10 +14,10 @@ preloader(images);
 export default (
   <Slide transition={"zoom"} bgColor="fifth">
     <Heading size={3} textColor="primary">
-      todoActions
+      todoApp
     </Heading>
     <List>
-      <Appear><Image src={images.appActions}/></Appear>
+      <Appear><Image src={images.appView}/></Appear>
     </List>
   </Slide>
 );

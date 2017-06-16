@@ -10,7 +10,7 @@ import { theme } from "../common/themes/darkTheme.js";
 import '../../../stylesheets/animate.css';
 
 // Require CSS
-require("normalize.css");
+// require("normalize.css");
 require("spectacle/lib/themes/default/index.css");
 
 const slidesImports = [

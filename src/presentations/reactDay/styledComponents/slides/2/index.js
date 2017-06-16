@@ -1,18 +1,27 @@
 import React from "react";
-import { Slide, Image } from "spectacle";
+import { Slide, Heading, Image } from "spectacle";
+
 // Import mapValues from lodash
 import mapValues from "lodash/mapValues";
 // Import image preloader util
 import preloader from "spectacle/lib/utils/preloader";
 
 const images = mapValues({
-  flux: require("../../assets/flux.png")
+  logo: require("../../assets/logo2.png")
 }, v => v.replace('/', ''));
 
 preloader(images);
 
 export default (
   <Slide transition={["zoom"]}>
-      <Image src={images.flux} margin="40px auto" height="310px" />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <Heading size={1}>
+      What is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} it?
+    </Heading>
   </Slide>
 );

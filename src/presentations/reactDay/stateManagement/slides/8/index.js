@@ -6,7 +6,7 @@ import mapValues from "lodash/mapValues";
 import preloader from "spectacle/lib/utils/preloader";
 
 const images = mapValues({
-  views: require("../../assets/views.png")
+  actions: require("../../assets/actions.png")
 }, v => v.replace('/', ''));
 
 preloader(images);
@@ -14,14 +14,13 @@ preloader(images);
 export default (
   <Slide transition={"zoom"}>
     <Heading size={1}>
-      Views
+      Actions
     </Heading>
     <List>
-      <Appear><ListItem>React components</ListItem></Appear>
-      <Appear><ListItem>Subscribe to stores and listen for changes</ListItem></Appear>
-      <Appear><ListItem>Ensure one way of data flow. Only one view in a hierarchy listens for changes in the store</ListItem></Appear>
-      <Appear><ListItem>Updates all other views underneath in the hierarchy</ListItem></Appear>
-      <Appear><Image src={images.views} margin="30px" height="327px" /></Appear>
+      <Appear><ListItem textColor="secondary">Actions define an activity to be performed. They have type and payload</ListItem></Appear>
+      <Appear><ListItem textColor="secondary">Stores use the action type to determine further processing</ListItem></Appear>
+      <Appear><ListItem textColor="secondary">Action creators are helper methods to create actions</ListItem></Appear>
+      <Appear><Image src={images.actions} margin="30px" height="327px" /></Appear>
     </List>
   </Slide>
 );
