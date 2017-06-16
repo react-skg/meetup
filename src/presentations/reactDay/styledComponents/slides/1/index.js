@@ -13,6 +13,12 @@ preloader(images);
 
 export default (
   <Slide transition={["zoom"]}  bgColor="secondary">
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
       <Image src={images.logo} width="100%"/>
       <br />
       <br />

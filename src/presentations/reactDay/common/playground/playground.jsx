@@ -1,7 +1,7 @@
 import React from 'react';
 import styled, { css } from 'styled-components';
 import * as polished from 'polished';
-import { foreground, red, lightGrey } from './colors';
+import { foreground, red } from './colors';
 
 import {
   LiveProvider,
@@ -48,24 +48,10 @@ height: 22.22222222222222rem;
 overflow-y: scroll;
 overflow-x: hidden;
 cursor: text;
-white-space: pre-wrap;
+white-space: pre-wrap!important;
 flex-basis: 50%;
 width: 50%;
 max-width: 50%;
-display: block;
-color: #C5C8C6;
-padding: 0.5rem;
-margin: 0;
-box-sizing: border-box;
-vertical-align: baseline;
-outline: none;
-text-shadow: none;
-hyphens: none;
-word-wrap: normal;
-word-break: normal;
-text-align: left;
-word-spacing: normal;
-tab-size: 2;
 ${column}
 `;
 
@@ -85,15 +71,14 @@ const StyledError = styled(LiveError)`
   color: ${foreground};
 `;
 
-const Playground = ({ noInline, code }) => (
+const Playground = ({ noInline, code, scope }) => (
   <StyledProvider
     code={code}
     noInline={noInline}
-    scope={{ React, styled }}
-    mountStylesheet={false}
+    scope={{ React, styled, ...scope }}
   >
     <LiveWrapper>
-      <StyledEditor />
+      <StyledEditor onChange={(code) => {}} />
       <StyledPreview />
     </LiveWrapper>
 

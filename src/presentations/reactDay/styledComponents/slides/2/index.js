@@ -14,8 +14,14 @@ preloader(images);
 
 export default (
   <Slide transition={["zoom"]}>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
     <Heading size={1}>
-      What is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} ?
+      What is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} it?
     </Heading>
   </Slide>
 );
