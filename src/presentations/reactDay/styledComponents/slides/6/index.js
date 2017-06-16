@@ -16,6 +16,7 @@ const jsxExample = (`
 
   render(
 	<div>
+    // Comment\n<div>Hello World!</div>
 		<Input placeholder="@mxstbr" type="text" />
 		<Input value="@geelen" type="text" />
 	</div>
@@ -28,13 +29,8 @@ export default (
   <br />
   <br />
   <br />
-    <div style={{ display: "flex" }}>
-      <div>
-        <Playground code={jsxExample} noInline/>
-      </div>
-      <div>
-
-      </div>
+    <div>
+      <Playground code={jsxExample} noInline/>
     </div>
   </Slide>
 );
