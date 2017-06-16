@@ -4,22 +4,22 @@ import { Link } from 'react-router-dom';
 import './speakers.css';
 
 const routes = {
-  sartios: '/intro',
+  sartio: '/intro',
   christina: '/state-management',
-  nikos: '/react-native',
-  dimitris: '/react-redux',
-  lefteris: '/react-router',
-  pavlos: '/styled-components',
+  niko: '/react-native',
+  dimitri: '/react-redux',
+  lefteri: '/react-router',
+  pavlo: '/styled-components',
   jamal: '/server-side-rendering'
 };
 
 const images = {
-  pavlos: require("../../../../assets/pavlos.jpg"),
-  dimitris: require("../../../../assets/dimitris.png"),
-  nikos: require("../../../../assets/nikos.jpg"),
+  pavlo: require("../../../../assets/pavlos.jpg"),
+  dimitri: require("../../../../assets/dimitris.png"),
+  niko: require("../../../../assets/nikos.jpg"),
   christina: require("../../../../assets/xristina.jpg"),
-  lefteris: require("../../../../assets/lefteris.jpg"),
-  sartios: require("../../../../assets/sartios.jpg"),
+  lefteri: require("../../../../assets/lefteris.jpg"),
+  sartio: require("../../../../assets/sartios.jpg"),
   jamal: require("../../../../assets/jamal.jpg"),
   background: require("../../../../assets/background.png"),
   logo: require("../../../../assets/logo.png")
@@ -29,7 +29,7 @@ export default class Speakers extends Component {
   constructor(props){
     super(props);
     this.state = {
-      speaker: 'sartios'
+      speaker: 'sartio'
     };
   }
 
@@ -51,7 +51,7 @@ export default class Speakers extends Component {
             <div className="meetup-speakers-top">
               <div className="meetup-speakers-datetime-container">
                 <div className="meetup-speakers-datetime">
-                  <div className="meetup-speakers-datetime-time"></div>
+                  <div className="meetup-speakers-datetime-time">11:00am</div>
                 <div className="meetup-speakers-datetime-date">Saturday, June 17th, 2017</div>
                 </div>
               </div>
@@ -59,13 +59,13 @@ export default class Speakers extends Component {
                 <div className="meetup-speakers-accounts-container">
                   <div className="meetup-speakers-accounts">
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'sartios' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'sartio' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("sartios"); }}
+                          onClick={() => { this.handleChangeSpeaker("sartio"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'sartios' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="sartios" src={images['sartios']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'sartio' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="sartio" src={images['sartio']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Sartios</div>
@@ -86,13 +86,13 @@ export default class Speakers extends Component {
                       </div>
                     </div>
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'dimitris' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'dimitri' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("dimitris"); }}
+                          onClick={() => { this.handleChangeSpeaker("dimitri"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'dimitris' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="dimitris" src={images['dimitris']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'dimitri' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="dimitri" src={images['dimitri']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Dimitris</div>
@@ -100,13 +100,13 @@ export default class Speakers extends Component {
                     </div>
 
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'niko' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
+                          onClick={() => { this.handleChangeSpeaker("niko"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'niko' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="niko" src={images['niko']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Nick</div>
@@ -114,13 +114,13 @@ export default class Speakers extends Component {
                     </div>
 
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'lefteris' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'lefteri' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("lefteris"); }}
+                          onClick={() => { this.handleChangeSpeaker("lefteri"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'lefteris' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="lefteris" src={images['lefteris']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'lefteri' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="lefteri" src={images['lefteri']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Lefteris</div>
@@ -128,32 +128,32 @@ export default class Speakers extends Component {
                     </div>
 
                     <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'pavlos' ? 'active' : ''}`}>
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'pavlo' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("pavlos"); }}
+                          onClick={() => { this.handleChangeSpeaker("pavlo"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'pavlos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="pavlos" src={images['pavlos']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'pavlo' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="pavlo" src={images['pavlo']}></img>
                           </div>
                         </div>
                         <div className="meetup-speakers-account-name">Pavlos</div>
                       </div>
                     </div>
 
-                    <div className="meetup-speakers-account-wrapper">
-                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
+                    {/* <div className="meetup-speakers-account-wrapper">
+                      <div className={`meetup-speakers-account-container ${this.state.speaker === 'niko' ? 'active' : ''}`}>
                         <div
                           className="meetup-speakers-account"
-                          onClick={() => { this.handleChangeSpeaker("nikos"); }}
+                          onClick={() => { this.handleChangeSpeaker("niko"); }}
                         >
-                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'nikos' ? 'active' : ''}`}>
-                            <img className="meetup-speakers-account-logo-image" alt="nikos" src={images['nikos']}></img>
+                          <div className={`meetup-speakers-account-logo-container ${this.state.speaker === 'niko' ? 'active' : ''}`}>
+                            <img className="meetup-speakers-account-logo-image" alt="niko" src={images['niko']}></img>
                           </div>
                         </div>
-                        <div className="meetup-speakers-account-name">Nikos</div>
+                        <div className="meetup-speakers-account-name">niko</div>
                       </div>
-                    </div>
+                    </div> */}
 
                     <div className="meetup-speakers-account-wrapper">
                       <div className={`meetup-speakers-account-container ${this.state.speaker === 'jamal' ? 'active' : ''}`}>
