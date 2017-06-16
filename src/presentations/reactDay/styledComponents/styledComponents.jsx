@@ -11,7 +11,14 @@ const slidesImports = [
   import("./slides/3"),
   import("./slides/4"),
   import("./slides/5"),
-  import("./slides/6")
+  import("./slides/6"),
+  import("./slides/7"),
+  import("./slides/8"),
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11"),
+  import("./slides/12"),
+  import("./slides/13")
 ];
 
 export default class StyledComponents extends Component {
