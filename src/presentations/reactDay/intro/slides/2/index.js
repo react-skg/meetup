@@ -1,14 +1,14 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Heading, Slide, List } from "spectacle";
+
+import ListItemControl from '../../components/listItemControl/listItemControl'
 
 export default (
     <Slide transition={["fade"]} bgColor="primary">
-      <Heading>Today we will talk about...</Heading>
+      <Heading textColor="tertiary">What is React JS</Heading>
         <List>
-          <Appear><ListItem>What is React JS</ListItem></Appear>
-          <Appear><ListItem>JSX and Virtual DOM</ListItem></Appear>
-          <Appear><ListItem>State & Events</ListItem></Appear>
-          <Appear><ListItem>Going Large Scale with React JS</ListItem></Appear>
+          <ListItemControl>Facebook UI library</ListItemControl>
+          <ListItemControl>Creator: Jordan Walke (@jordwalke)</ListItemControl>
         </List>
     </Slide>
 );

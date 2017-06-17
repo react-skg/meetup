@@ -1,15 +1,13 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Heading, Slide, Image } from "spectacle";
+
+const images = {
+  jsx: require("../../assets/jsx.png")
+};
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-      <Heading textColor="tertiary">Virtual DOM</Heading>
-        <List>
-          <Appear><ListItem>DOM: abstraction of a structured text</ListItem></Appear>
-          <Appear><ListItem>Virtual DOM: abstraction of the HTML DOM</ListItem></Appear>
-          <Appear><ListItem>React computes diffs using Virtual DOM</ListItem></Appear>
-          <Appear><ListItem>React applies diffs to DOM</ListItem></Appear>
-          <Appear><ListItem>Re render the app</ListItem></Appear>
-        </List>
+      <Heading textColor="tertiary">JSX or No JSX</Heading>
+      <Image key="1" src={images.jsx.replace("/", "")} height="500px"/>
     </Slide>
 );

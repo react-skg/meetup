@@ -1,13 +1,12 @@
 import React from "react";
-import { Heading, Slide, List, ListItem, Appear } from "spectacle";
+import { Slide, Image } from "spectacle";
+
+const images = {
+  counter: require("../../assets/counter.png")
+};
 
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
-      <Heading textColor="tertiary">JSX</Heading>
-        <List>
-          <Appear><ListItem>Syntactic sugar for React.createElement</ListItem></Appear>
-          <Appear><ListItem>React must be in scope</ListItem></Appear>
-          <Appear><ListItem>Use Dot Notation</ListItem></Appear>
-        </List>
+        <Image key="1" src={images.counter.replace("/", "")} margin="0px auto 40px" height="700px"/>
     </Slide>
 );
