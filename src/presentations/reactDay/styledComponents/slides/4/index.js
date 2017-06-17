@@ -13,7 +13,15 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
+  <Slide
+    transition={["slide"]}
+    style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}
+    notes={(
+      <div>
+        <p>css in js. react-native, εχει ολη την δυναμη τις javascript  επαναχρισιμοποιησιμος κοδικας, μοναδικοτητα κλασεων. </p>
+        </div>
+    )}
+  >
     <br />
     <br />
     <br />
