@@ -6,7 +6,7 @@ import ListItemControl from '../../components/listItemControl/listItemControl'
 export default (
     <Slide transition={["fade"]} bgColor="primary">
       <Heading textColor="tertiary">What is React JS</Heading>
-        <List>
+        <List style={{marginTop: '40px'}}>
           <ListItemControl>Facebook UI library</ListItemControl>
           <ListItemControl>Creator: Jordan Walke (@jordwalke)</ListItemControl>
         </List>

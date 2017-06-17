@@ -20,4 +20,8 @@ ListItemControl.propTypes = {
   animationDelay: string
 };
 
+ListItemControl.defaultProps = {
+  className: 'intro-presentation-list-item'
+}
+
 export default ListItemControl;

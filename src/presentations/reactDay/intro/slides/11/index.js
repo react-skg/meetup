@@ -6,7 +6,7 @@ import ListItemControl from '../../components/listItemControl/listItemControl';
 export default (
     <Slide transition={["zoom"]} bgColor="primary">
       <Heading textColor="tertiary">Virtual DOM</Heading>
-        <List>
+        <List style={{marginTop: '40px'}}>
           <ListItemControl>DOM: abstraction of HTML</ListItemControl>
           <ListItemControl>Virtual DOM: abstraction of DOM</ListItemControl>
           <ListItemControl>Compute & apply diffs</ListItemControl>
