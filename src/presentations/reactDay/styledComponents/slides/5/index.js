@@ -8,10 +8,10 @@ export default (
     notes={(
       <div>
         <p></p>
-        <p>εξωτερικο αρχιο css σαν classnames </p>
-        <p>μετατρεπει ενα object style μεσο της injectSheet σε props και τα δινει σαν classNames</p>
-        <p>γραφεις κωδικα με μεσα στο js και τα περνας μεσο μιας function css σαν classnames</p>
-        <p>Inline style</p>
+        <p>CSS Modules - εξωτερικο αρχειο css σαν classnames </p>
+        <p>JSS - μετατρεπει ενα object style μεσο της injectSheet σε props και τα δινει σαν classNames</p>
+        <p>Aphrodite - γραφεις κωδικα με μεσα στο js και τα περνας μεσο μιας function css σαν classnames</p>
+        <p>Radium - Inline style</p>
       </div>
     )}
   >
