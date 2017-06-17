@@ -1,5 +1,5 @@
 import React from "react";
-import { Heading, Slide } from "spectacle";
+import { Slide } from "spectacle";
 import './style.css';
 
 export default (
