@@ -1,0 +1,3 @@
+.spectacle-slide div:first-child {
+    align-items: flex-start!important;
+}

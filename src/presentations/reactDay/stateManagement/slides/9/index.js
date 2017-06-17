@@ -1,25 +1,23 @@
 import React from "react";
-import CodeSlide from 'spectacle-code-slide';
+import { Heading, Slide, List, Appear, Image } from "spectacle";
+// Import mapValues from lodash
+import mapValues from "lodash/mapValues";
+// Import image preloader util
+import preloader from "spectacle/lib/utils/preloader";
+
+const images = mapValues({
+  appActions: require("../../assets/appActions.png")
+}, v => v.replace('/', ''));
+
+preloader(images);
 
 export default (
-  <CodeSlide
-    transition={[]}
-    lang="js"
-    textSize=".6em"
-    code={`var Dispatcher = require(\'flux\').Dispatcher; \n`+
-          `var AppDispatcher = new Dispatcher();\n`+
-          'AppDispatcher.handleViewAction = function(action) {\n'+
-            'this.dispatch({\n'+
-            '  source: \'VIEW_ACTION\',\n'+
-              'action: action\n'+
-            '});\n' +
-            '}\n\n'+
-            'module.exports = AppDispatcher;'
-          }
-    ranges={[
-      { loc: [0, 1], note: "Importing flux Dispatcher" },
-      { loc: [2, 3] }, //TodoList Component
-      { loc: [4, 10], title: "Contructor Method" }
-    ]}
-    />
+  <Slide transition={"zoom"} bgColor="fifth">
+    <Heading size={3} textColor="primary">
+      todoActions
+    </Heading>
+    <List>
+      <Appear><Image src={images.appActions}/></Appear>
+    </List>
+  </Slide>
 );

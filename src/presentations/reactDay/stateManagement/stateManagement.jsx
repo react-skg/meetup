@@ -5,6 +5,7 @@ import React, { Component } from "react";
 import { Deck, Slide } from "spectacle";
 // Import theme fro the Deck
 import { theme } from "../common/themes/darkTheme.js";
+import './stateManagement.css';
 // All slides
 const slidesImports = [
   import("./slides/1"),
@@ -15,7 +16,10 @@ const slidesImports = [
   import("./slides/6"),
   import("./slides/7"),
   import("./slides/8"),
-  import("./slides/9")
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11"),
+  import("./slides/12")
 ];
 
 export default class Presentation extends Component {

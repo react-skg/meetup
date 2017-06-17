@@ -1,15 +1,11 @@
 import React, { Component } from 'react';
 import CodeSlide from 'spectacle-code-slide';
-import { BrowserRouter as Router, Route, Switch, Redirect, Prompt } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
 
 import { simpleRouterCode, playGroundCode } from './assets';
 import routerImage from '../../../assets/react-router/simpleRouter.PNG';
-// import {
-//   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-//   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
-// } from 'spectacle';
 
-import { Deck, Slide, Text, Appear, List, ListItem, Heading, Code, ComponentPlayground } from 'spectacle';
+import { Deck, Slide, Appear, List, ListItem, Heading, ComponentPlayground } from 'spectacle';
 
 import { theme } from '../common/themes/darkTheme';
 import './reactRouter.post.css';
@@ -46,37 +42,36 @@ export default class ReactRouter extends Component {
               </ListItem>
             </Appear>
             <Appear><ListItem>Route auth, prompts and redirects.</ListItem></Appear>
-            <Appear><ListItem>How we can get the {'Router\'s'} params in a deeply nested component.</ListItem></Appear>
-            <Appear><ListItem>Animated route changing.</ListItem></Appear>
+            <Appear><ListItem>Live examples.</ListItem></Appear>
           </List>
         </Slide>
         <Slide transition={['zoom']} bgColor="primary">
           <Heading textColor="#000" textSize="55px">
-            <code>react-router</code> / What is it?
+            <code>react-router</code> / What is it and what it can achieve?
           </Heading>
           <List>
             <Appear>
               <ListItem textSize="35px">
-                  Industry standard for client side routing with React.
-                </ListItem>
+                Industry standard for client side routing with React.
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="35px">
-                  Its API changed in every major version, but in v4
-                  it makes sense because it follows the React {'component\'s'} lifecycle.
-                </ListItem>
+                Its API changed in every major version, but in v4
+                it makes sense because it follows the React {'component\'s'} lifecycle.
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="35px">
-                  We can achieve selective rendering of components by
-                  matching the path of each route.
-                </ListItem>
+                We can achieve selective rendering of components by
+                matching the path of each route.
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="35px">
-                  Restrict parts of our application and redirect
-                  unauthorized users.
-                </ListItem>
+                Restrict parts of our application and redirect
+                unauthorized users.
+              </ListItem>
             </Appear>
             <Appear>
               <ListItem textSize="35px">
@@ -106,11 +101,75 @@ export default class ReactRouter extends Component {
               because we don\'t want <Speakers /> to be rendered in every route.' },
           ]}
         />
-        <Slide id="slide3">
+        <Slide>
           <Heading textColor="#000" textSize="55px">
             <code>react-router</code> / Components
           </Heading>
-          <Text>ReactRouter 3</Text>
+          <List>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<Route/>`}</code> - Main component that renders through its 'component', 'render' or 'children' prop.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<Switch/>`}</code> - Renders the first route with matching pathname (only one!).
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<Link/>`}</code> - Self explanatory component which when clicked redirects to its specified 'to' (object or string) prop.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<NavLink/>`}</code> - Same but also has props of 'activeClassName' and 'activeStyle' to style the links if their path has matched.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<Prompt/>`}</code> - Prompt component to get user confirmation.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>{`<Redirect/>`}</code> - Return the Redirect component inside your own or in route level.
+              </ListItem>
+            </Appear>
+          </List>
+        </Slide>
+        <Slide>
+          <Heading textColor="#000" textSize="55px">
+            <code>react-router</code> / Props and HoCs
+          </Heading>
+          <List>
+            <Appear>
+              <ListItem textSize="35px">
+                When a route matches, it injects to the rendered component 3 props: <code>match, history, location</code>
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>match</code> - Contains all the information about the matched path. Path, url, any wildcard params and the isExact flag.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>history</code> - Length, last action performed and most importantly functions that allow us to programmatically
+                redirect to another path, go back and forth in the history stack or replace entries.
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>location</code> - Information about where you are currently at. Pathname, search terms and the hash url fragment (if any).
+              </ListItem>
+            </Appear>
+            <Appear>
+              <ListItem textSize="35px">
+                <code>withRouter</code> - Export any component under the router's context with it to inject all the above props to it e.g. <code>export withRouter(MyAwesomeComponent)</code>
+              </ListItem>
+            </Appear>
+          </List>
         </Slide>
         <Slide transition={['zoom']}>
           <div id="react-router-playground">
@@ -121,14 +180,17 @@ export default class ReactRouter extends Component {
                 Router,
                 Route,
                 Switch,
-                Redirect,
-                Prompt,
+                Redirect
               }}
             />
           </div>
         </Slide>
-        <Slide id="slide4">
-          <Text>ReactRouter 4</Text>
+        <Slide>
+          <Heading textColor="#000" textSize="55px">
+            <code>react-router</code> / Any questions?
+          </Heading>
+          <br />
+          Thank you for your attention.
         </Slide>
       </Deck>
     );

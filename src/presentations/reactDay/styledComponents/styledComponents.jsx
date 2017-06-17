@@ -1,32 +1,53 @@
 import React, { Component } from 'react';
+import { Deck, Slide } from 'spectacle';
 
-// import {
-//   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-//   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
-// } from 'spectacle';
+import { theme } from "../common/themes/styledTheme.js";
 
-import { Deck, Slide, Text, BlockQuote, Quote } from 'spectacle';
-
-import { theme } from "../common/themes/darkTheme.js";
+// All slides
+const slidesImports = [
+  import("./slides/1"),
+  import("./slides/2"),
+  import("./slides/3"),
+  import("./slides/4"),
+  import("./slides/5"),
+  import("./slides/6"),
+  import("./slides/7"),
+  import("./slides/8"),
+  import("./slides/9"),
+  import("./slides/10"),
+  import("./slides/11"),
+  import("./slides/12"),
+  import("./slides/13")
+];
 
 export default class StyledComponents extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      slides: Array(slidesImports.length).fill(<Slide key="loading" />)
+    }
+  }
+
+  componentDidMount() {
+    const importedSlides = [];
+    Promise.all(slidesImports).then((slidesImportsResolved) => {
+      slidesImportsResolved.forEach((slide) => {
+        importedSlides.push(slide.default);
+      });
+      this.setState({ slides: importedSlides });
+    });
+  }
+
   render() {
+    const { slides } = this.state;
     return (
-      <Deck theme={theme} transition="slide" progress="pacman">
-        <Slide id="slide1">
-          <BlockQuote>
-              <Quote textColor="#FFF">"Styled Components"</Quote>
-          </BlockQuote>
-        </Slide>
-        <Slide id="slide2">
-          <Text>StyledComponents 2</Text>
-        </Slide>
-        <Slide id="slide3">
-          <Text>StyledComponents 3</Text>
-        </Slide>
-        <Slide id="slide4">
-          <Text>StyledComponents 4</Text>
-        </Slide>
+      <Deck transition={["zoom", "slide"]} transitionDuration={500} theme={theme}>
+        {
+          slides.map((slide, index) => {
+            return React.cloneElement(slide, {key: index});
+          })
+        }
       </Deck>
     );
   }
