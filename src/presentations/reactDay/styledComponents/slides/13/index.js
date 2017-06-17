@@ -21,8 +21,8 @@ export default (
       </p>
 
       <ul className="content__container__list">
+        <li className="content__container__list__item">Schoox !</li>
         <li className="content__container__list__item">Ordereze !</li>
-      <li className="content__container__list__item">Schoox !</li>
         <li className="content__container__list__item">Lambda space !</li>
         <li className="content__container__list__item">everybody !</li>
       </ul>
