@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Slide } from "spectacle";
+import { Image, Slide, Heading } from "spectacle";
 
 const images = {
   graph: require("../../assets/1_image.png")

@@ -1,5 +1,5 @@
 import React from "react";
-import { Slide, Heading } from "spectacle";
+import { Slide, Heading, Appear } from "spectacle";
 
 // const images = {
 //   fb: require("../../assets/fb-animal.gif")
