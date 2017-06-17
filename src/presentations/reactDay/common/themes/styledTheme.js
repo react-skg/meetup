@@ -35,15 +35,15 @@ export const theme = {
 				...initialTheme.screen.progress.pacman,
 				pacmanBottom: {
 					...initialTheme.screen.progress.pacman.pacmanBottom,
-					background: initialTheme.screen.colors.tertiary
+					background: "#fff"
 				},
 				pacmanTop: {
 					...initialTheme.screen.progress.pacman.pacmanTop,
-					background: initialTheme.screen.colors.tertiary
+					background: "#fff"
 				},
 				point: {
 					...initialTheme.screen.progress.pacman.point,
-					borderColor: initialTheme.screen.colors.tertiary
+					borderColor: "#fff"
 				}
 			}
 		}

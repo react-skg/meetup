@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-
 import { Deck, Slide } from 'spectacle';
 
-import { theme } from "../common/themes/darkTheme.js";
+import { theme } from "../common/themes/styledTheme.js";
 
 // All slides
 const slidesImports = [

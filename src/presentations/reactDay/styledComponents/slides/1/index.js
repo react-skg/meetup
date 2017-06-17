@@ -12,7 +12,7 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={["zoom"]}  bgColor="secondary">
+  <Slide transition={["zoom"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)' }}>
       <br />
       <br />
       <br />

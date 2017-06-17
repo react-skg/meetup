@@ -12,8 +12,8 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={["zoom"]}>
-    <Heading size={3}>
+  <Slide transition={["zoom"]}  style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)' }}>
+    <Heading size={3} style={{ color: 'white' }}>
       Let's talk about styling!!!
     </Heading>
     <List>

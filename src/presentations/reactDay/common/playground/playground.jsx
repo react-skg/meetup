@@ -52,6 +52,7 @@ white-space: pre-wrap!important;
 flex-basis: 50%;
 width: 50%;
 max-width: 50%;
+border: none;
 ${column}
 `;
 

@@ -34,8 +34,8 @@ const jsxExample = (`
 `).trim();
 
 export default (
-  <Slide transition={["slide"]}>
-    <Heading size={3}>Use withComponent</Heading>
+  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
+    <Heading size={3} style={{ color: 'white' }}>Use withComponent</Heading>
     <br />
     <br />
     <br />

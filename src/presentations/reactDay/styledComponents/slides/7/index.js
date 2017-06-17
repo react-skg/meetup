@@ -28,8 +28,8 @@ render(
 `).trim();
 
 export default (
-  <Slide transition={["slide"]}>
-    <Heading size={1}>Getting Started</Heading>
+  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
+    <Heading size={3} style={{ color: 'white' }}>Getting Started</Heading>
   <br />
   <br />
   <br />

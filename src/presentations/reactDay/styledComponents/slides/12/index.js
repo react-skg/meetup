@@ -43,9 +43,9 @@ render(
   `).trim()
 
 export default (
-  <Slide transition={["slide"]}>
+  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
 
-    <Heading size={3}>Theming</Heading>
+    <Heading size={3} style={{ color: 'white' }}>Theming</Heading>
     <br />
     <br />
     <br />

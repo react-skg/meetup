@@ -13,15 +13,21 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={["slide"]} id="slide2">
-      <Heading size={3}>
+  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
+    <br />
+    <br />
+    <br />
+    <br />
+      <Heading size={3} style={{ color: 'white' }}>
         Why is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} awesome?
       </Heading>
+      <br />
+      <br />
       <List>
-        <Appear><ListItem textColor="secondary">Write actual CSS</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">Have power of JS</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">Theming</ListItem></Appear>
-        <Appear><ListItem textColor="secondary">Full React Native Support</ListItem></Appear>
+        <Appear><ListItem>Write actual CSS</ListItem></Appear>
+        <Appear><ListItem>Have power of JS</ListItem></Appear>
+        <Appear><ListItem>Theming</ListItem></Appear>
+        <Appear><ListItem>Full React Native Support</ListItem></Appear>
       </List>
   </Slide>
 );

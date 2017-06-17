@@ -13,15 +13,15 @@ const images = mapValues({
 preloader(images);
 
 export default (
-  <Slide transition={["zoom"]}>
+  <Slide transition={["zoom"]}  style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)' }}>
     <br />
     <br />
     <br />
     <br />
     <br />
     <br />
-    <Heading size={1}>
-      What is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} it?
+  <Heading size={1} style={{ color: 'white' }}>
+      What is {<Image src={images.logo} margin="0" width="80px" height="80px"/>} ?
     </Heading>
   </Slide>
 );

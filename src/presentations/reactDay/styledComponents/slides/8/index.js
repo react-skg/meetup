@@ -26,8 +26,8 @@ const jsxExample = (`
   `).trim()
 
 export default (
-  <Slide transition={["slide"]}>
-    <Heading size={3}>Adapting based on props</Heading>
+  <Slide transition={["slide"]} style={{ background: 'linear-gradient(20deg, rgb(219, 112, 147), #daa357)', color: 'white'}}>
+    <Heading size={3} style={{ color: 'white' }}>Adapting based on props</Heading>
     <br />
     <br />
     <br />
