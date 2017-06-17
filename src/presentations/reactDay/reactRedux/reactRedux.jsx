@@ -1,32 +1,73 @@
 import React, { Component } from 'react';
 
-// import {
-//   Appear, BlockQuote, Cite, CodePane, Code, Deck, Fill, Fit,
-//   Heading, Image, Layout, ListItem, List, Quote, Slide, Text,
-// } from 'spectacle';
+import { Deck, Slide } from 'spectacle';
 
-import { Deck, Slide, Text, BlockQuote, Quote } from 'spectacle';
+import createTheme from 'spectacle/lib/themes/default';
 
-import { theme } from "../common/themes/darkTheme.js";
+import slidesImports from './slides';
+
+import './main.css';
+
+const initialTheme = createTheme(
+  {
+    primary: '#042B35',
+    secondary: '#D2A03E',
+    tertiary: '#FD853D',
+    quartenary: '#A7A7A7'
+  },
+  {
+    primary: 'Fira Code'
+  }
+);
+
+export const theme = {
+  ...initialTheme,
+  screen: {
+    ...initialTheme.screen,
+    components: {
+      ...initialTheme.screen.components,
+      code: {
+        ...initialTheme.screen.components.code,
+        color: initialTheme.screen.colors.quartenary
+      },
+      text: {
+        ...initialTheme.screen.components.text,
+        color: initialTheme.screen.colors.quartenary
+      },
+      link: {
+        ...initialTheme.screen.components.link,
+        color: initialTheme.screen.colors.secondary
+      }
+    }
+  }
+};
 
 export default class ReactRedux extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      slides: Array(slidesImports.length).fill(<Slide key="loading" />)
+    };
+  }
+
+  componentDidMount() {
+    Promise.all(slidesImports).then((slideComponents) => {
+      const slides = slideComponents.map(
+        (slide = { default: '' }) => slide.default
+      );
+      this.setState({ slides });
+    });
+  }
+
   render() {
+    const { slides } = this.state;
     return (
-      <Deck theme={theme} transition="slide" progress="pacman">
-        <Slide id="slide1">
-          <BlockQuote>
-              <Quote textColor="#FFF">"React Redux"</Quote>
-          </BlockQuote>
-        </Slide>
-        <Slide id="slide2">
-          <Text>ReactRedux 2</Text>
-        </Slide>
-        <Slide id="slide3">
-          <Text>ReactRedux 3</Text>
-        </Slide>
-        <Slide id="slide4">
-          <Text>ReactRedux 4</Text>
-        </Slide>
+      <Deck
+        theme={theme}
+        progress="pacman"
+      >
+        {slides.map((slide, index) => React.cloneElement(slide, { key: index }))}
       </Deck>
     );
   }
