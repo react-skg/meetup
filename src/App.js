@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Presentation from './presentations/reactDay/presentation.jsx';
+import { ReactNews } from './presentations/reactNews/reactNews.jsx';
 
 export default class App extends Component {
   render() {
-    return <Presentation />;
+    return <ReactNews />;
   }
 }
