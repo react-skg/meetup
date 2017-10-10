@@ -8,7 +8,7 @@ export default (
   >
     <Heading size={3} style={{ color: 'white' }}>React 16 News</Heading>
     <List>
-      <Appear><p>- Error Handing using Error Boundaries.</p></Appear>
+      <Appear><p>- Error Handling using Error Boundaries.</p></Appear>
       <Appear><p>- Render multiple elements without a wrapping element in a component.</p></Appear>
       <Appear><p>- Render text only components.</p></Appear>
       <Appear><p>- Render elements outside the current react tree using portals (ReactDOM.createPortal).</p></Appear>
